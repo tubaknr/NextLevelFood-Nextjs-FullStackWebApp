@@ -1,33 +1,38 @@
 import ImagePicker from "@/components/meals/image-picker";
 import classes from "./page.module.css";
+import { shareMeal } from "@/lib/actions";
 
 export default function ShareMealPage(){
     
-    // SERVER ACTION
-    async function shareMeal(formData){
-        "use server"; // creates serrver action. which guarantees the fcn will be only in server.
-        //only executed on the server.
-        //in server action-> async msut be used.
+    // // SERVER ACTION LIB/ACTIONS.JS'E TAŞINACAK:
+    // async function shareMeal(formData){
+    //     "use server"; // creates serrver action. which guarantees the fcn will be only in server.
+    //     //only executed on the server.
+    //     //in server action-> async msut be used.
 
-        const meal = { 
-            // aşağıda <input name="xxx" .../> yazılanlardaki NAMElerden çekiliyor.
-            // get(NAME)
-            title: formData.get("title"),
-            summary: formData.get("summary"),
-            creator_email: formData.get("email"),
-            instructions: formData.get("instructions"),
-            image: formData.get("image"),
-            creator: formData.get("name")
-        }
-    }
+    //     const meal = { 
+    //         // aşağıda <input name="xxx" .../> yazılanlardaki NAMElerden çekiliyor.
+    //         // get(NAME)
+    //         title: formData.get("title"),
+    //         summary: formData.get("summary"),
+    //         creator_email: formData.get("email"),
+    //         instructions: formData.get("instructions"),
+    //         image: formData.get("image"),
+    //         creator: formData.get("name")
+    //     }
+    // }
 
     return(
         <>
         <header className={classes.header}>
-            <h1>Share your <span className={classes.highlight}>favorite meal</span></h1>
+            <h1>
+                Share your <span className={classes.highlight}>favorite meal</span>
+            </h1>
             <p>Or any other meal you feel needs sharing!</p>
         </header>
+
         <main className={classes.main}>
+        
             <form className={classes.form} action={shareMeal}>
                 <div className={classes.row}>
                     <p>
@@ -56,7 +61,9 @@ export default function ShareMealPage(){
                         required
                     ></textarea>
                 </p>
+                
                 <ImagePicker label="Your image" name="image"/>
+
                 <p className={classes.actions}>
                     <button type="submit">
                         Share Meal
