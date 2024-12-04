@@ -16,6 +16,9 @@ export default function ImagePicker({name, label}){
     // state ve state'i set edecek fonksiyonun çağrıldığı handler fcn
     function handlePickImage(event){
         const file = event.target.files[0];
+        console.log("IMAGEPICKER FILE: ",file);
+        console.log("IMAGEPICKER FILE TYPEOF : ", typeof file);
+
 
         if (!file){
             setPickedImg(null);
