@@ -1,5 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+Nextjs14, Amazon AWS S3 and SQLite
 ![Screenshot from 2024-12-04 16-38-29](https://github.com/user-attachments/assets/cf4b21c3-9987-44e8-89e5-0c27b8677b4e)
 ![Screenshot from 2024-12-04 16-38-35](https://github.com/user-attachments/assets/ecdae12c-7cbd-45ec-895d-c7742fb17473)
 ![Screenshot from 2024-12-04 16-38-49](https://github.com/user-attachments/assets/46bfdac0-dfe8-4d35-b00b-c02e0497402b)
