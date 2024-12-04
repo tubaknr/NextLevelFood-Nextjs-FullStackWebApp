@@ -3,6 +3,22 @@ import classes from "./page.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+// Generate metadata for dynamic page [mealSlug]
+export async function generateMetadata({params}) {
+    const meal = await getMeal(params.mealSlug);
+    console.log("MEALLLLLLLLL:", meal);
+
+    if(!meal){ // http://localhost:3000/meals/not-found-meal-name
+        notFound();
+    }
+
+    return{
+        title: meal.title,
+        description: meal.summary
+    };
+}   
+
+
 export default async function MealDetailsPage({params}){
 
     const meal = await getMeal(params.mealSlug);

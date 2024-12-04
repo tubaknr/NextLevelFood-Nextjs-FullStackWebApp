@@ -4,6 +4,12 @@ import MealsGrid from "@/components/meals/meals-grid";
 import { getMeals } from "@/lib/getMeals";
 import { Suspense } from "react"; //data yüklenene kadar loadng gösterir. SARMALAMA yapılır.
 
+// Bu sayfaya özel olan metadata
+export const metadata = {
+    title: 'All Meals',
+    description: 'Browse the delicious meals shared by our vibrant community.',
+  }
+  
 
 // data fetching part
 async function Meals(){
