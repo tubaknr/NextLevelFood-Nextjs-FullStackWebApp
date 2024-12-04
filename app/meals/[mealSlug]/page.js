@@ -34,7 +34,8 @@ export default async function MealDetailsPage({params}){
         <>
             <header className={classes.header}>
                 <div className={classes.image}>
-                    <Image src={meal.image}
+                    <Image src={`https://tuba-nextjs-meals-users-image.s3.eu-north-1.amazonaws.com/${meal.image}`}
+                           alt={meal.title}
                            fill />
                 </div>
                 <div className={classes.headerText}>

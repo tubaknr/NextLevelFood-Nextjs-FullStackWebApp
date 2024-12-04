@@ -9,7 +9,7 @@ export default function MealItem({title, slug, image, summary, creator}){
 
             <header>
                 <div className={classes.image}>
-                    <Image src={image} 
+                    <Image src={`https://tuba-nextjs-meals-users-image.s3.eu-north-1.amazonaws.com/${image}`} 
                            alt={title} 
                            fill/>
                 </div>
