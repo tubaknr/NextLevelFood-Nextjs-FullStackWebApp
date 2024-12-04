@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 export default async function MealDetailsPage({params}){
 
     const meal = await getMeal(params.mealSlug);
-    // console.log(meal);
+    console.log(meal);
 
     if (!meal){
        notFound(); // en yakındaki not-found sayfasını yükle.    
